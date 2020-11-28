@@ -1,0 +1,16 @@
+
+{
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedtls_user_config.h\""
+    ],
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate"                  : 115200,
+            "platform.stdio-convert-newlines"           : true,
+            "platform.stdio-buffered-serial"            : true,
+            "platform.stdio-flush-at-exit"              : true,
+            "target.features_add"                       : ["EXPERIMENTAL_API"],
+            "target.printf_lib"                         : "std"
+        }
+    }
+}
